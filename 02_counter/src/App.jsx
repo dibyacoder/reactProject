@@ -15,11 +15,11 @@ function App() {
     setValue(value+1)
     setValue(value+1)
     //Above 4 syntax wont run 4 times, It will be seen as a single task from a batch processes and increment will be done once only. To overcome this below
+    setValue((prevCounter) => (prevCounter + 1))
     setValue(prevCounter => prevCounter + 1)
     setValue(prevCounter => prevCounter + 1)
     setValue(prevCounter => prevCounter + 1)
-    setValue(prevCounter => prevCounter + 1)
-    //We can implement it like this, where setValue() works like a call back function, fetches the previous value first then updates it.
+    //We can implement it like this, where setValue() works like a callback function, fetches the previous value first then updates it.
   }
     
   }
